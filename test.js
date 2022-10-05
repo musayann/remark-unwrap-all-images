@@ -1,12 +1,12 @@
 import test from 'tape'
 import {remark} from 'remark'
 import remarkHtml from 'remark-html'
-import remarkUnwrapImages from './index.js'
+import remarkUnwrapAllImages from './index.js'
 
-test('remarkUnwrapImages', (t) => {
+test('remarkUnwrapAllImages', (t) => {
   t.equal(
     remark()
-      .use(remarkUnwrapImages)
+      .use(remarkUnwrapAllImages)
       .use(remarkHtml)
       .processSync('![hi](there.png)')
       .toString(),
@@ -16,7 +16,7 @@ test('remarkUnwrapImages', (t) => {
 
   t.equal(
     remark()
-      .use(remarkUnwrapImages)
+      .use(remarkUnwrapAllImages)
       .use(remarkHtml)
       .processSync('![alpha](alpha.png) ![bravo](bravo.png)')
       .toString(),
@@ -26,7 +26,7 @@ test('remarkUnwrapImages', (t) => {
 
   t.equal(
     remark()
-      .use(remarkUnwrapImages)
+      .use(remarkUnwrapAllImages)
       .use(remarkHtml)
       .processSync('some text ![and](and.png) an image')
       .toString(),
@@ -36,7 +36,7 @@ test('remarkUnwrapImages', (t) => {
 
   t.equal(
     remark()
-      .use(remarkUnwrapImages)
+      .use(remarkUnwrapAllImages)
       .use(remarkHtml)
       .processSync('some text')
       .toString(),
@@ -46,17 +46,17 @@ test('remarkUnwrapImages', (t) => {
 
   t.equal(
     remark()
-      .use(remarkUnwrapImages)
+      .use(remarkUnwrapAllImages)
       .use(remarkHtml)
-      .processSync('[](#remark)')
+      .processSync('[](#remark) [](#remark)')
       .toString(),
-    '<p><a href="#remark"></a></p>\n',
+      '<p><a href="#remark"></a> <a href="#remark"></a></p>\n',
     'should not unwrap if there are no images in links'
   )
 
   t.equal(
     remark()
-      .use(remarkUnwrapImages)
+      .use(remarkUnwrapAllImages)
       .use(remarkHtml)
       .processSync('[![hi](there.png)](#remark)')
       .toString(),
@@ -66,17 +66,17 @@ test('remarkUnwrapImages', (t) => {
 
   t.equal(
     remark()
-      .use(remarkUnwrapImages)
+      .use(remarkUnwrapAllImages)
       .use(remarkHtml)
       .processSync('[![hi](there.png)](#remark)!')
       .toString(),
     '<a href="#remark"><img src="there.png" alt="hi"></a>\n<p>!</p>\n',
-    'should not unwrap links next to other content'
+    'should unwrap links next to other content'
   )
 
   t.equal(
     remark()
-      .use(remarkUnwrapImages)
+      .use(remarkUnwrapAllImages)
       .use(remarkHtml)
       .processSync('[![Hello](there.png), world](#remark)')
       .toString(),
@@ -86,7 +86,7 @@ test('remarkUnwrapImages', (t) => {
 
   t.equal(
     remark()
-      .use(remarkUnwrapImages)
+      .use(remarkUnwrapAllImages)
       .use(remarkHtml)
       .processSync('![hi][image]\n\n[image]: kitten.png')
       .toString(),
@@ -96,7 +96,7 @@ test('remarkUnwrapImages', (t) => {
 
   t.equal(
     remark()
-      .use(remarkUnwrapImages)
+      .use(remarkUnwrapAllImages)
       .use(remarkHtml)
       .processSync(
         'Some text ![alpha](alpha.png), some other text ![bravo](bravo.png) some more text!'
@@ -105,6 +105,5 @@ test('remarkUnwrapImages', (t) => {
     '<p>Some text </p>\n<img src="alpha.png" alt="alpha">\n<p>, some other text </p>\n<img src="bravo.png" alt="bravo">\n<p> some more text!</p>\n',
     'should unwrap images in respective to the text order'
   )
-
   t.end()
 })
