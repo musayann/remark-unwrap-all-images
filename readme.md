@@ -12,20 +12,17 @@
 
 ## Contents
 
-- [remark-unwrap-all-images](#remark-unwrap-all-images)
-  - [Contents](#contents)
-  - [What is this?](#what-is-this)
-  - [When should I use this?](#when-should-i-use-this)
-  - [Install](#install)
-  - [Use](#use)
-  - [API](#api)
-      - [`unified().use(remarkUnwrapAllImages)`](#unifieduseremarkunwrapallimages)
-  - [Types](#types)
-  - [Compatibility](#compatibility)
-  - [Security](#security)
-  - [Related](#related)
-  - [Contribute](#contribute)
-  - [License](#license)
+*   [What is this?](#what-is-this)
+*   [When should I use this?](#when-should-i-use-this)
+*   [Install](#install)
+*   [Use](#use)
+*   [API](#api)
+*   [Types](#types)
+*   [Compatibility](#compatibility)
+*   [Security](#security)
+*   [Related](#related)
+*   [Contribute](#contribute)
+*   [License](#license)
 
 ## What is this?
 
@@ -138,6 +135,7 @@ user content, it only removes some existing nodes, so there are no openings for
 [cross-site scripting (XSS)][xss] attacks.
 
 ## Related
+
 *   [`remark-unwrap-images`](https://github.com/remarkjs/remark-unwrap-images)
     — a plugin that searches for paragraphs which contain only images and nothing else, and then remove those surrounding paragraphs.
 *   [`remark-images`](https://github.com/remarkjs/remark-images)

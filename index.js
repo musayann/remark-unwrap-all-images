@@ -23,12 +23,12 @@ export default function remarkUnwrapImages() {
     visit(tree, 'paragraph', (node, index, parent) => {
 
       /**
-       * @type {any[] }
+       * @type {(Paragraph | PhrasingContent)[] }
        */
       const items = [];
 
       /**
-       * @type {PhrasingContent[]}
+       * @type {PhrasingContent[] }
        */
       let children = [];
 
