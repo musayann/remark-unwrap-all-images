@@ -13,14 +13,15 @@
     "image",
     "unwrap"
   ],
-  "repository": "remarkjs/remark-unwrap-all-images",
-  "bugs": "https://github.com/remarkjs/remark-unwrap-all-images/issues",
+  "repository": "musayann/remark-unwrap-all-images",
+  "bugs": "https://github.com/musayann/remark-unwrap-all-images/issues",
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/unified"
   },
-  "author": "John Otander <johnotander@gmail.com> (https://johno.com)",
+  "author": "Yannick Musafiri <yannick@octan.group> (https://octan.group)",
   "contributors": [
+    "Yannick Musafiri <yannick@octan.group> (https://octan.group)",
     "John Otander <johnotander@gmail.com> (https://johno.com)",
     "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
     "Brent Jackson <jxnblk@gmail.com>",
