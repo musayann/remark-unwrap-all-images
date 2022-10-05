@@ -12,17 +12,18 @@
 
 ## Contents
 
-*   [What is this?](#what-is-this)
-*   [When should I use this?](#when-should-i-use-this)
-*   [Install](#install)
-*   [Use](#use)
-*   [API](#api)
-*   [Types](#types)
-*   [Compatibility](#compatibility)
-*   [Security](#security)
-*   [Related](#related)
-*   [Contribute](#contribute)
-*   [License](#license)
+  - [Contents](#contents)
+  - [What is this?](#what-is-this)
+  - [When should I use this?](#when-should-i-use-this)
+  - [Install](#install)
+  - [Use](#use)
+  - [API](#api)
+  - [Types](#types)
+  - [Compatibility](#compatibility)
+  - [Security](#security)
+  - [Related](#related)
+  - [Contribute](#contribute)
+  - [License](#license)
 
 ## What is this?
 
@@ -162,13 +163,13 @@ abide by its terms.
 
 <!-- Definitions -->
 
-[build-badge]: https://github.com/remarkjs/remark-unwrap-all-images/workflows/main/badge.svg
+[build-badge]: https://github.com/musayann/remark-unwrap-all-images/workflows/main/badge.svg
 
-[build]: https://github.com/remarkjs/remark-unwrap-all-images/actions
+[build]: https://github.com/musayann/remark-unwrap-all-images/actions
 
-[coverage-badge]: https://img.shields.io/codecov/c/github/remarkjs/remark-unwrap-all-images.svg
+[coverage-badge]: https://img.shields.io/codecov/c/github/musayann/remark-unwrap-all-images.svg
 
-[coverage]: https://codecov.io/github/remarkjs/remark-unwrap-all-images
+[coverage]: https://codecov.io/github/musayann/remark-unwrap-all-images
 
 [downloads-badge]: https://img.shields.io/npm/dm/remark-unwrap-all-images.svg
 
