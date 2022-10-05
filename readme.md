@@ -9,18 +9,17 @@
 
 ## Contents
 
-  - [Contents](#contents)
-  - [What is this?](#what-is-this)
-  - [When should I use this?](#when-should-i-use-this)
-  - [Install](#install)
-  - [Use](#use)
-  - [API](#api)
-  - [Types](#types)
-  - [Compatibility](#compatibility)
-  - [Security](#security)
-  - [Related](#related)
-  - [Contribute](#contribute)
-  - [License](#license)
+*   [What is this?](#what-is-this)
+*   [When should I use this?](#when-should-i-use-this)
+*   [Install](#install)
+*   [Use](#use)
+*   [API](#api)
+*   [Types](#types)
+*   [Compatibility](#compatibility)
+*   [Security](#security)
+*   [Related](#related)
+*   [Contribute](#contribute)
+*   [License](#license)
 
 ## What is this?
 
@@ -174,17 +173,7 @@ abide by its terms.
 
 [size-badge]: https://img.shields.io/bundlephobia/minzip/remark-unwrap-all-images.svg
 
-[size]: https://bundlephobia.com/result?p=remark-unwrap-all-images
-
-[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
-[backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
-[collective]: https://opencollective.com/unified
-
-[chat-badge]: https://img.shields.io/badge/chat-discussions-success.svg
-
-[chat]: https://github.com/remarkjs/remark/discussions
+[size]: https://bundlephobia.com/result?p=remark-unwrap-all-image
 
 [npm]: https://docs.npmjs.com/cli/install
 
