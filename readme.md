@@ -138,7 +138,8 @@ user content, it only removes some existing nodes, so there are no openings for
 [cross-site scripting (XSS)][xss] attacks.
 
 ## Related
-
+*   [`remark-unwrap-images`](https://github.com/remarkjs/remark-unwrap-images)
+    — a plugin that searches for paragraphs which contain only images and nothing else, and then remove those surrounding paragraphs.
 *   [`remark-images`](https://github.com/remarkjs/remark-images)
     — add a simpler image syntax
 *   [`remark-embed-images`](https://github.com/remarkjs/remark-embed-images)
