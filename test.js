@@ -50,7 +50,7 @@ test('remarkUnwrapAllImages', (t) => {
       .use(remarkHtml)
       .processSync('[](#remark) [](#remark)')
       .toString(),
-      '<p><a href="#remark"></a> <a href="#remark"></a></p>\n',
+    '<p><a href="#remark"></a> <a href="#remark"></a></p>\n',
     'should not unwrap if there are no images in links'
   )
 

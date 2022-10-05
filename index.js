@@ -17,8 +17,7 @@ import {visit} from 'unist-util-visit'
 export default function remarkUnwrapImages() {
   return (tree) => {
     visit(tree, 'paragraph', (node, index, parent) => {
-
-      if(!node.children || !node.children.length || !parent) return;
+      if (!node.children || node.children.length === 0 || !parent) return
 
       /**
        * @type {(Paragraph | PhrasingContent)[] }
@@ -31,7 +30,7 @@ export default function remarkUnwrapImages() {
       let children = []
 
       const appendChildren = () => {
-        if (!children.length) return
+        if (children.length === 0) return
         if (children.length === 1 && whitespace(children[0])) return
         items.push({
           type: node.type,
@@ -51,7 +50,7 @@ export default function remarkUnwrapImages() {
         items.push(child)
       }
 
-      appendChildren();
+      appendChildren()
 
       parent.children.splice(index || 0, 1, ...items)
     })
@@ -64,7 +63,6 @@ export default function remarkUnwrapImages() {
  * @returns {boolean}
  */
 function applicable(child, inLink) {
-
   if (child.type === 'image' || child.type === 'imageReference') {
     return true
   }
@@ -75,13 +73,14 @@ function applicable(child, inLink) {
     return false
   }
 
-  if(!child.children || !child.children.length) return false
+  if (!child.children || child.children.length === 0) return false
 
   const images = child.children.filter((subChild) => applicable(subChild, true))
   const other = child.children.filter((subChild) => !applicable(subChild, true))
 
-  if (images.length && !other.length) {
+  if (images.length > 0 && other.length === 0) {
     return true
   }
+
   return false
 }
