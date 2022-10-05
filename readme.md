@@ -27,7 +27,8 @@
 ## What is this?
 
 This package is a [unified][] ([remark][]) plugin that searches for paragraphs
-which contain images (possibly in links) and then moves the images outside the paragraphs
+which contain images (possibly in links) and then moves the images outside
+the paragraphs
 
 **unified** is a project that transforms content with abstract syntax trees
 (ASTs).
@@ -130,14 +131,16 @@ This plugin works with `unified` version 6+ and `remark` version 7+.
 
 ## Security
 
-Use of `remark-unwrap-all-images` does not involve **[rehype][]** (**[hast][]**) or
-user content, it only removes some existing nodes, so there are no openings for
-[cross-site scripting (XSS)][xss] attacks.
+Use of `remark-unwrap-all-images` does not involve **[rehype][]** (**[hast][]**)
+or user content, it only removes some existing nodes, so there
+are no openings for[cross-site scripting (XSS)][xss] attacks.
 
 ## Related
 
 *   [`remark-unwrap-images`](https://github.com/remarkjs/remark-unwrap-images)
-    — a plugin that searches for paragraphs which contain only images and nothing else, and then remove those surrounding paragraphs.
+    — a plugin that searches for paragraphs which contain
+    only images and nothing else, and then remove those
+    surrounding paragraphs.
 *   [`remark-images`](https://github.com/remarkjs/remark-images)
     — add a simpler image syntax
 *   [`remark-embed-images`](https://github.com/remarkjs/remark-embed-images)

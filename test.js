@@ -30,7 +30,7 @@ test('remarkUnwrapImages', (t) => {
       .use(remarkHtml)
       .processSync('some text ![and](and.png) an image')
       .toString(),
-      '<p>some text </p>\n<img src="and.png" alt="and">\n<p> an image</p>\n',
+    '<p>some text </p>\n<img src="and.png" alt="and">\n<p> an image</p>\n',
     'should unwrap images next to other content'
   )
 
@@ -93,14 +93,16 @@ test('remarkUnwrapImages', (t) => {
     '<img src="kitten.png" alt="hi">\n',
     'should supports image references'
   )
- 
+
   t.equal(
     remark()
       .use(remarkUnwrapImages)
       .use(remarkHtml)
-      .processSync('Some text ![alpha](alpha.png), some other text ![bravo](bravo.png) some more text!')
+      .processSync(
+        'Some text ![alpha](alpha.png), some other text ![bravo](bravo.png) some more text!'
+      )
       .toString(),
-      '<p>Some text </p>\n<img src="alpha.png" alt="alpha">\n<p>, some other text </p>\n<img src="bravo.png" alt="bravo">\n<p> some more text!</p>\n',
+    '<p>Some text </p>\n<img src="alpha.png" alt="alpha">\n<p>, some other text </p>\n<img src="bravo.png" alt="bravo">\n<p> some more text!</p>\n',
     'should unwrap images in respective to the text order'
   )
 
